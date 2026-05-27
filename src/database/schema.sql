@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS validades (
 CREATE TABLE IF NOT EXISTS inspecoes (
   id           INTEGER PRIMARY KEY AUTOINCREMENT,
   extintor_id  INTEGER NOT NULL,
-  data_inspecao TEXT   NOT NULL,               -- ISO 8601: YYYY-MM-DD
+  data_inspecao DATE   NOT NULL,               -- ISO 8601: YYYY-MM-DD
   responsavel  TEXT    NOT NULL,
   observacoes  TEXT,
   FOREIGN KEY (extintor_id) REFERENCES extintores(id) ON DELETE CASCADE
